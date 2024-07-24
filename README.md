@@ -48,4 +48,17 @@ As an additional demo, there is a screenshot of code to add a bar chart in the [
 
 ## Demo 4 - live context
 
+There is a PR open for this repo to add plotting of a bar chart. This is a great use case for live context.
 
+1. Open the PR in your browser and show the code changes.
+1. From the copilot, start a new conversation with live context.
+1. Ask the copilot to explain the PR. This prompt works: 'What problems are there in the github pull request I was just looking at?'
+1. Show the output.
+
+## Demo 5 - more advanced live context
+
+For a more detailed PR:
+
+1. Open [github.com/pieces-app/documentation/pull/486](https://github.com/pieces-app/documentation/pull/486)
+1. Read the PR
+1. Ask the copilot to summarize what Mason asked for - 'what changes did mason request in the PR I was just looking at?'
