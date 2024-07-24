@@ -1,7 +1,7 @@
 import pandas as pd
 import psutil
 
-def get_top_llms():
+def get_fastest_llms():
     df = pd.read_csv('Open LLM-Perf Leaderboard.csv')
 
     ram_in_mb = psutil.virtual_memory().total/1024/1024
@@ -13,7 +13,7 @@ def get_top_llms():
     return df
 
 # Load the top LLMs
-df = get_top_llms()
+df = get_fastest_llms()
 
 # Print the top LLMs
 print(df.head())
