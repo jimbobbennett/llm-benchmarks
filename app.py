@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 import pandas as pd
 import psutil
 
@@ -12,8 +13,24 @@ def get_fastest_llms():
 
     return df
 
-# Load the top LLMs
+def plot_chart(df_to_plot, filename: str) -> str:
+    df_to_plot.plot(x="Model", y="Score (%)", kind="bar")
+
+    plt.title("LLM scores")
+    plt.xlabel("Model")
+    plt.ylabel("Score (%)")
+
+    plt.savefig(filename)
+
+# Load the fastest LLMs
 df = get_fastest_llms()
 
-# Print the top LLMs
-print(df.head())
+# Filter the top 10 by score
+df = df.nlargest(10, 'Score (%)')
+
+# Sort the dataframe by score descending
+sorted_df = df.sort_values(by=['Score (%)'], ascending=False)
+
+# Plot the chart
+plot_chart(df, 'llm_scores.png')
+
