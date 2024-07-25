@@ -62,3 +62,20 @@ For a more detailed PR:
 1. Open [github.com/pieces-app/documentation/pull/486](https://github.com/pieces-app/documentation/pull/486)
 1. Read the PR
 1. Ask the copilot to summarize what Mason asked for - 'what changes did mason request in the PR I was just looking at?'
+
+
+## Demo 6 - errors and live context
+
+Pieces can help with errors as well:
+
+1. Add the following code to the end of the app.py file to get an error:
+
+    ```python
+    # Find the worst performing LLMs
+    worst_df = df.sort_values('tokens/s', ascending=True).head(10)
+    print(worst_df)
+    ```
+
+1. Run the code and look at the error in the terminal
+1. Start a new copilot chat and turn on live context.
+1. Ask the following question 'tell me about the `keyerror` I just got in vs code'
